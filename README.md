@@ -1,19 +1,21 @@
 # Linux-guide1
 Linux commands in detail
 
- 1. User Management in Linux
+ 1.User Management in Linux
+-------------------------------------------------
+Introduction to User Management in Linux :
 
-Introduction to User Management in Linux
-Linux is a multi-user operating system, meaning multiple users can operate on a system simultaneously. Proper user management ensures security, controlled access, and system integrity.
+* Linux is a multi-user operating system, meaning multiple users can operate on a system simultaneously. Proper user management ensures security, controlled access, and system integrity.
 
 Key files involved in user management:
-
+--------------------------------------------------------------
 /etc/passwd – Stores user account details.
 /etc/shadow – Stores encrypted user passwords.
 /etc/group – Stores group information.
 /etc/gshadow – Stores secure group details.
+
 Creating Users in Linux
-To create a new user in Linux, use:
+* To create a new user in Linux, use:
 
 useradd Command (For most Linux distributions)
 useradd username
@@ -29,8 +31,9 @@ adduser Command (For Debian-based systems)
 adduser username
 This is an interactive command that asks for a password and additional details.
 
-Managing User Passwords
-To set or change a user’s password:
+Managing User Passwords :
+
+* To set or change a user’s password:
 
 passwd username
 Enforcing Password Policies
@@ -44,6 +47,7 @@ Modifying Users
 Modify an existing user with usermod:
 
 Change the username:
+
 usermod -l new_username old_username
 Change the home directory:
 usermod -d /new/home/directory -m username
@@ -53,6 +57,7 @@ Deleting Users
 To remove a user but keep their home directory:
 
 userdel username
+
 To remove a user and their home directory:
 
 userdel -r username
@@ -80,10 +85,10 @@ visudo
 Then add:
 
 username ALL=(ALL) NOPASSWD: /path/to/command
+2.File management in Linux
+-------------------------------------------------------------------------
+* File and Directory Management :
 
- 2. File management in Linux
- 
-File and Directory Management
 ls – Lists files and directories in the current location.
 cd /path/to/directory – Changes the working directory.
 pwd – Prints the current working directory.
@@ -94,7 +99,8 @@ rm -r folder – Deletes a folder and its contents.
 cp file1.txt file2.txt – Copies a file.
 cp -r dir1 dir2 – Copies a directory recursively.
 mv old_name new_name – Moves or renames a file or directory.
-File Viewing and Editing
+* File Viewing and Editing :
+
 cat file.txt – Displays file content.
 tac file.txt – Displays file content in reverse order.
 less file.txt – Opens a file for viewing with scrolling support.
